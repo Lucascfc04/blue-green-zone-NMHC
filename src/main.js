@@ -399,12 +399,11 @@ function app() {
           <h2>Samen maken we van NMHC een groene beweegplek voor iedereen</h2>
           <p>Het Green Blue Challenge Park verbindt sport, gezondheid, natuur en ontmoeting. Wil je meedenken, partner worden of bijdragen aan de volgende fase?</p>
           <div class="actions">
-            <a class="btn primary" href="mailto:info@bluezone-dalmarasweg.nl?subject=Partner worden Green Blue Challenge Park">Word partner</a>
-            <a class="btn light" href="mailto:info@bluezone-dalmarasweg.nl">Neem contact op</a>
+            <a class="btn primary" href="#partners">Word partner</a>
+            <a class="btn light" href="#contact">Neem contact op</a>
             <a class="btn ghost" href="#terreinplan">Bekijk terreinplan</a>
             <a class="btn ghost" href="downloads/projectvoorstel-placeholder.pdf">Download projectvoorstel</a>
           </div>
-          <a class="mail" href="mailto:info@bluezone-dalmarasweg.nl">info@bluezone-dalmarasweg.nl</a>
         </div>
       </section>
     </main>
