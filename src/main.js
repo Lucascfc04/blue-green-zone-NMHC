@@ -158,13 +158,91 @@ const value = [
 
 const partners = ["NMHC", "Gemeente Nijmegen", "HAN", "Radboud Universiteit", "Hortus Nijmegen", "SVAN", "Stichting Blue Zone d'Almarasweg", "Sportclubs omgeving", "GGD / welzijnspartners", "Bedrijven en sponsors"];
 
+const projectOutcomes = [
+  ["Onderzoeksvraag", "Hoe kan NMHC een HYROX-geinspireerd beweegconcept ontwikkelen dat past bij de Green Blue Zone, de gebruikers en de omgeving?"],
+  ["Kerninzicht", "Het concept werkt het sterkst als complete Health Hub: een 1 km Running Loop, Groene Corridor, HYROX-geinspireerde Hub, herstelplek, vergroening en activatieprogramma."],
+  ["Advies", "Start gefaseerd met een pilot, bewijs gebruik en draagvlak, regel beheer en financiering, en schaal daarna op naar een vaste Green Blue Challenge Park-inrichting."],
+  ["Waarde", "Het project levert meer op dan sport: het verbindt NMHC met wijk, campus, natuur, gezondheid, onderwijs, preventie en klimaatadaptatie."]
+];
+
+const researchPhases = [
+  {
+    phase: "Empathize",
+    title: "Begrijpen van plek, gebruikers en stakeholders",
+    text: "De huidige situatie, stakeholdergesprekken, persona's, DESTEP/SWOT en trends laten zien dat NMHC op een kansrijke locatie ligt, maar dat toegankelijkheid, beheer, inclusie en duidelijke programmering cruciaal zijn.",
+    result: "Inzicht in doelgroepen, drempels, kansen, randvoorwaarden en maatschappelijke waarde.",
+    docs: [
+      ["Stakeholdergesprekken", "downloads/onderbouwing/stakeholdergesprekken-green-blue-zone.docx"],
+      ["DESTEP & SWOT", "downloads/onderbouwing/destep-swot-analyse-nmhc.docx"],
+      ["Trendanalyse", "downloads/onderbouwing/trendanalyse-hyrox-blue-zone.docx"],
+      ["Persona-onderbouwing", "downloads/onderbouwing/persona-onderbouwing.docx"]
+    ]
+  },
+  {
+    phase: "Define",
+    title: "Afbakening van het concept",
+    text: "De analyse is vertaald naar een duidelijke projectrichting: geen losse outdoor gym, maar een Green Blue Challenge Park waarin sport, gezondheid, ontmoeting en groen-blauwe kwaliteit samenkomen.",
+    result: "Een scherp concept, onderzoeksvraag, projectpaper en plan van aanpak voor besluitvorming.",
+    docs: [
+      ["Plan van aanpak", "downloads/onderbouwing/plan-van-aanpak.docx"],
+      ["Projectpaper HYROX Hub", "downloads/onderbouwing/project-paper-hyrox-hub.pdf"]
+    ]
+  },
+  {
+    phase: "Ideate",
+    title: "Van idee naar gebruiksstrategie",
+    text: "In de ideate-fase is onderzocht hoe de plek aantrekkelijk en actief gebruikt kan worden door teams, jeugd, studenten, omwonenden, ouderen, werknemers en partners.",
+    result: "Een uitgewerkt concept met gebruiksscenario's, activatie, programmering en ontwerpkeuzes.",
+    docs: [
+      ["Uitwerking idee HYROX", "downloads/onderbouwing/uitwerking-idee-hyrox.docx"],
+      ["Stimuleren van gebruik", "downloads/onderbouwing/stimuleren-gebruik-green-blue-zone.docx"]
+    ]
+  },
+  {
+    phase: "Prototype + Test",
+    title: "Visualiseren, toetsen en haalbaar maken",
+    text: "De gewenste situatie is visueel gemaakt en financieel doorgerekend. De raming laat zien dat fasering nodig is om investering, organisatie, onderhoud en risico's beheersbaar te houden.",
+    result: "Visualisaties, kostenraming, website en vervolgstappen voor partners en opdrachtgever.",
+    docs: [
+      ["Financiele onderbouwing", "downloads/onderbouwing/financiele-onderbouwing.docx"],
+      ["Websitebeschrijving", "downloads/onderbouwing/website-green-blue-zone.docx"],
+      ["Blue Zone uitgangspunt", "downloads/onderbouwing/blue-zone-dalmarasweg-v1-4.pdf"]
+    ]
+  }
+];
+
+const evidenceDocs = [
+  ["Plan van aanpak", "Onderzoeksopzet, fasering, hoofdvraag, deelvragen en verwachte eindproducten.", "Define", "downloads/onderbouwing/plan-van-aanpak.docx"],
+  ["Projectpaper HYROX Hub", "Stakeholdergerichte samenvatting van het concept, de route, doelgroepen en meerwaarde.", "Define", "downloads/onderbouwing/project-paper-hyrox-hub.pdf"],
+  ["Stakeholdergesprekken", "Input van NMHC, Groene Corridor, beheer, sportkunde en betrokken partners.", "Empathize", "downloads/onderbouwing/stakeholdergesprekken-green-blue-zone.docx"],
+  ["DESTEP & SWOT analyse", "Omgevingsanalyse van demografie, economie, trends, ecologie, beleid, kansen en risico's.", "Empathize", "downloads/onderbouwing/destep-swot-analyse-nmhc.docx"],
+  ["Trendanalyse HYROX / Blue Zone", "Onderbouwing waarom hardlopen, hybride training, buiten bewegen en preventie bij NMHC passen.", "Empathize", "downloads/onderbouwing/trendanalyse-hyrox-blue-zone.docx"],
+  ["Persona-onderbouwing", "Gebruikersperspectieven van jeugdleden, teams, omwonenden, scholieren en beslissers.", "Empathize", "downloads/onderbouwing/persona-onderbouwing.docx"],
+  ["Uitwerking idee HYROX", "Volledige conceptuitwerking van Green Blue Challenge Park, route, doelgroepen en implementatie.", "Ideate", "downloads/onderbouwing/uitwerking-idee-hyrox.docx"],
+  ["Stimuleren van gebruik", "Activatiestrategie met communicatie, evenementen, drempelverlaging en impactmeting.", "Ideate", "downloads/onderbouwing/stimuleren-gebruik-green-blue-zone.docx"],
+  ["Financiele onderbouwing", "Indicatieve kosten, tijd, haalbaarheid en fasering van wandelpad, hardlooppad en toestellen.", "Prototype + Test", "downloads/onderbouwing/financiele-onderbouwing.docx"],
+  ["Persona worksheet", "Visuele persona's als toets voor toegankelijkheid, behoefte en gebruik.", "Empathize", "downloads/onderbouwing/persona-worksheet.pdf"],
+  ["Visualisaties gewenste situatie", "Alle beelden van de toekomstige hub, paden, routeaansluitingen en groene inrichting als downloadpakket.", "Prototype + Test", "downloads/onderbouwing/visualisaties-gewenste-situatie.zip"],
+  ["Posters en kostenvisuals", "Visuele eindproducten voor activatie, evenementencommunicatie en financiële presentatie.", "Prototype + Test", "downloads/onderbouwing/posters-en-kostenvisuals.zip"]
+];
+
+const feasibilityFacts = [
+  ["Fase 0", "Voorbereiding", "€2.500 - €7.500", "1-3 maanden"],
+  ["Fase 1", "Wandel- en hardlooppad", "€65.000 - €115.000", "3-6 maanden"],
+  ["Fase 2", "Functional fitness", "€25.000 - €80.000", "2-4 maanden"],
+  ["Fase 3", "Activatie-events", "€1.500 - €7.500 per event", "4-8 weken"],
+  ["Fase 4", "Beheer en onderhoud", "€5.000 - €20.000 per jaar", "Doorlopend"]
+];
+
 const nav = [
   ["#idee", "Idee"],
+  ["#onderzoek", "Onderzoek"],
   ["#terreinplan", "Terreinplan"],
   ["#situatie", "Situatie"],
   ["#running-loop", "Running Loop"],
   ["#corridor", "Groene Corridor"],
   ["#hub", "Hub"],
+  ["#downloads", "Downloads"],
   ["#waarde", "Waarde"],
   ["#contact", "Contact"]
 ];
@@ -250,6 +328,30 @@ function app() {
         </div>
         <div class="grid pillars">
           ${pillars.map(([ic, title, text]) => `<article class="card pillar reveal"><div class="icon">${icon(ic)}</div><h3>${title}</h3><p>${text}</p></article>`).join("")}
+        </div>
+      </section>
+
+      <section class="section research-section" id="onderzoek">
+        <div class="section-head reveal">
+          <p class="eyebrow">Wat heeft het onderzoek opgeleverd?</p>
+          <h2>Van brede gebiedsanalyse naar een concreet, haalbaar en uitlegbaar parkconcept.</h2>
+          <p>De eindproducten zijn opgebouwd volgens Design Thinking. Daardoor laat de website niet alleen het eindbeeld zien, maar ook hoe de inzichten zijn ontstaan: vanuit gebruikers, stakeholders, trends, locatieonderzoek, conceptontwikkeling, prototyping en financiële haalbaarheid.</p>
+        </div>
+        <div class="outcome-grid">
+          ${projectOutcomes.map(([title, text]) => `<article class="outcome-card reveal"><h3>${title}</h3><p>${text}</p></article>`).join("")}
+        </div>
+        <div class="research-flow">
+          ${researchPhases.map((item, index) => `
+            <article class="research-card reveal">
+              <span class="phase-number">${index + 1}</span>
+              <p class="eyebrow">${item.phase}</p>
+              <h3>${item.title}</h3>
+              <p>${item.text}</p>
+              <strong>Opbrengst: ${item.result}</strong>
+              <div class="phase-downloads">
+                ${item.docs.map(([label, href]) => `<a href="${href}" download>${label}</a>`).join("")}
+              </div>
+            </article>`).join("")}
         </div>
       </section>
 
@@ -377,6 +479,20 @@ function app() {
         <div class="phase-line">${phases.map(([phase, title, text]) => `<article class="phase reveal"><span>${phase}</span><h3>${title}</h3><p>${text}</p></article>`).join("")}</div>
       </section>
 
+      <section class="section feasibility-section" id="haalbaarheid">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kosten, tijd en haalbaarheid</p>
+          <h2>Gefaseerd uitvoeren maakt het project beheersbaar.</h2>
+          <p>De financiële onderbouwing werkt met indicatieve bandbreedtes. Het advies is om te starten met voorbereiding en een pilot, daarna pas definitief te investeren in paden, toestellen, activatie en structureel beheer.</p>
+        </div>
+        <div class="feasibility-table reveal">
+          ${feasibilityFacts.map(([phase, part, costs, time]) => `<div><strong>${phase}</strong><span>${part}</span><b>${costs}</b><em>${time}</em></div>`).join("")}
+        </div>
+        <div class="center-actions reveal">
+          <a class="btn primary" href="downloads/onderbouwing/financiele-onderbouwing.docx" download>Download financiële onderbouwing</a>
+        </div>
+      </section>
+
       <section class="section value-section" id="waarde">
         <div class="section-head reveal">
           <p class="eyebrow">Maatschappelijke waarde</p>
@@ -385,6 +501,23 @@ function app() {
         <div class="value-layout">
           <div class="check-list">${value.map((v) => `<span>${icon("Handshake")}${v}</span>`).join("")}</div>
           <blockquote class="reveal">"De kracht van het plan zit in de combinatie: een sportieve 1 km route, een groene wandelverbinding en een functionele trainingshub als herkenbaar hart."</blockquote>
+        </div>
+      </section>
+
+      <section class="section downloads-section" id="downloads">
+        <div class="section-head reveal">
+          <p class="eyebrow">Onderbouwing downloaden</p>
+          <h2>Alle eindproducten bij elkaar, gekoppeld aan de fase waarin ze zijn gebruikt.</h2>
+          <p>Gebruik deze documenten voor besluitvorming, subsidiegesprekken, partneroverleg of verdere uitwerking met gemeente, NMHC en betrokken organisaties.</p>
+        </div>
+        <div class="download-grid">
+          ${evidenceDocs.map(([title, text, phase, href]) => `
+            <article class="download-card reveal">
+              <span>${phase}</span>
+              <h3>${title}</h3>
+              <p>${text}</p>
+              <a href="${href}" download>Download document</a>
+            </article>`).join("")}
         </div>
       </section>
 
@@ -402,7 +535,7 @@ function app() {
             <a class="btn primary" href="#partners">Word partner</a>
             <a class="btn light" href="#contact">Neem contact op</a>
             <a class="btn ghost" href="#terreinplan">Bekijk terreinplan</a>
-            <a class="btn ghost" href="downloads/projectvoorstel-placeholder.pdf">Download projectvoorstel</a>
+            <a class="btn ghost" href="downloads/onderbouwing/project-paper-hyrox-hub.pdf" download>Download projectpaper</a>
           </div>
         </div>
       </section>

@@ -271,6 +271,9 @@ h3 {
 .phase,
 .partner,
 .tile,
+.outcome-card,
+.research-card,
+.download-card,
 .contact-card {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -309,6 +312,93 @@ svg {
 
 .band {
   background: linear-gradient(180deg, #f5fafb, #eef6f0);
+}
+
+.research-section {
+  background: linear-gradient(180deg, #ffffff, #f5fafb);
+}
+
+.outcome-grid,
+.research-flow,
+.download-grid {
+  display: grid;
+  gap: 16px;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.outcome-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+
+.outcome-card {
+  padding: 22px;
+  border-top: 5px solid var(--green);
+}
+
+.outcome-card h3,
+.research-card h3,
+.download-card h3 {
+  font-size: 1.15rem;
+}
+
+.outcome-card p,
+.research-card p,
+.download-card p {
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.research-flow {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.research-card {
+  position: relative;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.research-card strong {
+  display: block;
+  margin-top: 14px;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+.phase-number {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--navy);
+  font-weight: 950;
+}
+
+.phase-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.phase-downloads a,
+.download-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 11px;
+  border-radius: 999px;
+  color: var(--navy);
+  background: #eaf5ef;
+  border: 1px solid #d5eadc;
+  font-size: 0.88rem;
+  font-weight: 850;
 }
 
 .map-section {
@@ -919,6 +1009,88 @@ svg {
   box-shadow: var(--shadow);
 }
 
+.feasibility-section {
+  background: #f6fafb;
+}
+
+.feasibility-table {
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.feasibility-table div {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 1.2fr 0.9fr;
+  gap: 14px;
+  align-items: center;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.feasibility-table div:last-child {
+  border-bottom: 0;
+}
+
+.feasibility-table strong {
+  color: #fff;
+  background: var(--green);
+  width: max-content;
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+.feasibility-table span,
+.feasibility-table em {
+  color: var(--muted);
+  font-style: normal;
+}
+
+.feasibility-table b {
+  color: var(--navy);
+}
+
+.center-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.downloads-section {
+  background: linear-gradient(180deg, #ffffff, #f4f8f4);
+}
+
+.download-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.download-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.download-card span {
+  width: max-content;
+  max-width: 100%;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--navy);
+  background: #e8f5ff;
+  border: 1px solid #d2ebfb;
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.download-card a {
+  margin-top: auto;
+}
+
 .phase {
   border-radius: 0;
   box-shadow: none;
@@ -1035,6 +1207,12 @@ blockquote {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .outcome-grid,
+  .research-flow,
+  .download-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .audience-grid,
   .partner-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1081,9 +1259,17 @@ blockquote {
   .gallery,
   .desired-gallery,
   .equipment-grid,
+  .outcome-grid,
+  .research-flow,
+  .download-grid,
   .audience-grid,
   .partner-grid {
     grid-template-columns: 1fr;
+  }
+
+  .feasibility-table div {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .before-after img,
