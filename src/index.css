@@ -274,6 +274,7 @@ h3 {
 .outcome-card,
 .research-card,
 .download-card,
+.persona-card,
 .contact-card {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -399,6 +400,55 @@ svg {
   border: 1px solid #d5eadc;
   font-size: 0.88rem;
   font-weight: 850;
+}
+
+.persona-section {
+  background: linear-gradient(180deg, #ffffff, #f6fafb);
+}
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.persona-card {
+  padding: 22px;
+  border-top: 5px solid var(--blue);
+}
+
+.persona-card span {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--navy);
+  font-weight: 950;
+  margin-bottom: 16px;
+}
+
+.persona-card h3 {
+  font-size: 1.1rem;
+}
+
+.persona-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.persona-card strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--navy);
+  line-height: 1.45;
+}
+
+.soft-button {
+  background: #eaf5ef;
 }
 
 .map-section {
@@ -1209,6 +1259,7 @@ blockquote {
 
   .outcome-grid,
   .research-flow,
+  .persona-grid,
   .download-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1261,6 +1312,7 @@ blockquote {
   .equipment-grid,
   .outcome-grid,
   .research-flow,
+  .persona-grid,
   .download-grid,
   .audience-grid,
   .partner-grid {

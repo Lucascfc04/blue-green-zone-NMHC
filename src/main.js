@@ -30,7 +30,7 @@ const routes = {
 
 const pillars = [
   ["Dumbbell", "Sport", "Hardlopen, functionele training, teamchallenges, outdoor fitness en hockeyvoorbereiding."],
-  ["HeartPulse", "Gezondheid", "Bewegen, ontmoeten, herstel, gezonde voeding, senior fit en laagdrempelige leefstijlstimulering."],
+  ["HeartPulse", "Gezondheid", "Bewegen, ontmoeten, herstel, senior fit en laagdrempelige leefstijlstimulering."],
   ["Leaf", "Groen & blauw", "Groene Corridor, biodiversiteit, schaduw, waterberging, verkoeling en een gezonde leefomgeving."]
 ];
 
@@ -121,8 +121,15 @@ const reasons = [
 ];
 
 const plaza = ["Start/finish-plek", "Zitbanken", "Kleine tribuneheuvel of zitplek", "Watertappunt", "Instructiebord", "Stretchplek", "Schaduw", "Mogelijke yoga/mobility-zone", "Ontmoetingsplek voor groepen"];
-const garden = ["Moestuinbakken", "Kruidentuin", "Workshops gezonde voeding", "Regenwatergebruik", "Betrokkenheid van vrijwilligers", "Educatie voor jeugd en studenten", "Gezonde sportkantine of recoverymomenten"];
 const blueGreen = ["Wadi's en infiltratiestroken", "Bloemrijke randen", "Schaduwbomen", "Groene buffers", "Waterdoorlatende ondergrond", "Biodiversiteit", "Verkoeling", "Natuurlijke overgang richting Groene Corridor"];
+
+const personaSnapshots = [
+  ["Lars", "Jeugdlid NMHC", "Wil buiten trainingen iets actiefs en leuks kunnen doen met vrienden.", "Maak de route speels, zichtbaar en laagdrempelig."],
+  ["Milan", "Selectiespeler", "Zoekt kwaliteit voor warming-up, kracht, mobiliteit en teamfitheid.", "Zorg voor robuuste stations die echt trainingswaarde toevoegen."],
+  ["Marianne", "Omwonende", "Wil een groene, toegankelijke plek waar wandelen en rustig bewegen logisch voelt.", "Communiceer duidelijk dat de route breder is dan alleen voor clubleden."],
+  ["Sanne", "Scholier/student", "Heeft behoefte aan korte, afwisselende beweegmomenten en sociale activiteiten.", "Koppel de plek aan challenges, lessen, clinics en groepsmomenten."],
+  ["Tom", "Bestuur/beslisser", "Kijkt naar draagvlak, beheer, veiligheid, kosten en maatschappelijke waarde.", "Werk gefaseerd en maak afspraken over beheer, toegang en partners."]
+];
 
 const audiences = [
   ["NMHC-teams", "1 km Running Loop en hub", "Betere voorbereiding en teamfitheid", "Teamtraining"],
@@ -140,7 +147,7 @@ const audiences = [
 const phases = [
   ["Fase 1", "Pilot", "Tijdelijke route, pop-up training, eerste testevents, gebruik meten."],
   ["Fase 2", "Basisaanleg", "1 km route markeren, eerste stations plaatsen, bewegwijzering, veilige ondergrond."],
-  ["Fase 3", "Uitbreiding", "HYROX Hub, Green Blue Plaza, herstelzone, community garden en extra vergroening."],
+  ["Fase 3", "Uitbreiding", "HYROX Hub, Green Blue Plaza, herstelzone, bewegwijzering en extra vergroening."],
   ["Fase 4", "Volledige Health Hub", "Vaste programmering, partners, monitoring, events, beheer en doorontwikkeling."]
 ];
 
@@ -156,7 +163,7 @@ const value = [
   "Maakt NMHC een herkenbare Health Hub"
 ];
 
-const partners = ["NMHC", "Gemeente Nijmegen", "HAN", "Radboud Universiteit", "Hortus Nijmegen", "SVAN", "Stichting Blue Zone d'Almarasweg", "Sportclubs omgeving", "GGD / welzijnspartners", "Bedrijven en sponsors"];
+const partners = ["NMHC", "Gemeente Nijmegen", "HAN", "Radboud Universiteit", "SVAN", "Stichting Blue Zone d'Almarasweg", "Sportclubs omgeving", "GGD / welzijnspartners", "Onderwijs en onderzoek", "Bedrijven en sponsors"];
 
 const projectOutcomes = [
   ["Onderzoeksvraag", "Hoe kan NMHC een HYROX-geinspireerd beweegconcept ontwikkelen dat past bij de Green Blue Zone, de gebruikers en de omgeving?"],
@@ -242,6 +249,7 @@ const nav = [
   ["#running-loop", "Running Loop"],
   ["#corridor", "Groene Corridor"],
   ["#hub", "Hub"],
+  ["#personas", "Persona's"],
   ["#downloads", "Downloads"],
   ["#waarde", "Waarde"],
   ["#contact", "Contact"]
@@ -446,15 +454,24 @@ function app() {
         <div class="feature-cloud">${plaza.map((d) => `<span>${d}</span>`).join("")}</div>
       </section>
 
-      <section class="section garden-section">
-        <div class="visual-copy reveal">
-          <img src="images/gewenste-pad-naar-bos.png" alt="Gewenste groene wandelverbinding richting de bossen" />
-          <div>
-            <p class="eyebrow">Gezonde leefstijl</p>
-            <h2>Community garden & gezonde voeding</h2>
-            <p>Een community garden maakt het Blue Zone-verhaal zichtbaar. Gezonde voeding wordt onderdeel van de plek door moestuinbakken, kruiden, educatie, workshops en samenwerking met partners zoals Hortus Nijmegen.</p>
-            <div class="check-list">${garden.map((g) => `<span>${icon("Leaf2")}${g}</span>`).join("")}</div>
-          </div>
+      <section class="section persona-section" id="personas">
+        <div class="section-head reveal">
+          <p class="eyebrow">Voor wie is het ontworpen?</p>
+          <h2>Persona's vertalen het onderzoek naar concrete gebruikersbehoeften.</h2>
+          <p>De persona's laten zien dat het park niet voor één type sporter is ontworpen. Het concept moet tegelijk werken voor clubleden, prestatieve teams, omwonenden, scholieren/studenten en beslissers die kijken naar beheer en haalbaarheid.</p>
+        </div>
+        <div class="persona-grid">
+          ${personaSnapshots.map(([name, role, need, design]) => `
+            <article class="persona-card reveal">
+              <span>${name}</span>
+              <h3>${role}</h3>
+              <p>${need}</p>
+              <strong>${design}</strong>
+            </article>`).join("")}
+        </div>
+        <div class="center-actions reveal">
+          <a class="btn primary" href="downloads/onderbouwing/persona-onderbouwing.docx" download>Download persona-onderbouwing</a>
+          <a class="btn light soft-button" href="downloads/onderbouwing/persona-worksheet.pdf" download>Download persona worksheet</a>
         </div>
       </section>
 
